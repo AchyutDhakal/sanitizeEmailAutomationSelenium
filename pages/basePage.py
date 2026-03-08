@@ -21,10 +21,11 @@ class BasePage:
     
     def click_element(self, locator):
         element = self.find_clickable_element(locator)
-        element.locator.click()
+        element.click()
 
     def enter_text(self, locator, text):
         element = self.find_element(locator)
+        element.clear()
         element.send_keys(text)
 
     def is_element_present(self, locator):
@@ -41,6 +42,13 @@ class BasePage:
     def is_element_visible(self, locator):
         try:
             self.find_visible_element(locator)
+            return True
+        except TimeoutException:
+            return False
+        
+    def is_element_clickable(self,locator):
+        try:
+            self.find_clickable_element(locator)
             return True
         except TimeoutException:
             return False
