@@ -7,8 +7,7 @@ class LoginPage(BasePage):
     PASSWORD_INPUT = (By.XPATH,"//input[@name='password']")
     FORGOT_PASSWORD = (By.XPATH,"//a[normalize-space()='Forgot Password?']")
     LOGIN_BUTTON =  (By.XPATH,"//button[normalize-space()='Log In']")
-    PROFILE_ICON =(By.XPATH,"//span[@class='flex size-full items-center justify-center rounded-full bg-global-primary text-white']")
-    LOGOUT_BUTTON = (By.XPATH,"//span[normalize-space()='Logout']")
+    PROFILE_ICON =(By.XPATH,"//button[contains(@class,'rounded-full')]")
 
     def __init__(self, driver):
         super().__init__(driver)
