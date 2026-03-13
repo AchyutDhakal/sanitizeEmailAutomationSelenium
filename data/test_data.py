@@ -1,3 +1,5 @@
+import time
+
 VALID_LOGIN = [
     {
     "email":"achyutdhakal008@gmail.com",
@@ -27,7 +29,7 @@ INVALID_LOGIN = [
 VALID_SIGNUP =[
     {
         "name": "Achyut Dhakal",
-        "email": "automationtest067+4@gmail.com",
+        "email": f"automationtest067+{int(time.time())}@gmail.com",
         "password":"Testtest7*"
     }
 ]
